@@ -23,3 +23,9 @@ urlpatterns = [
     path('',include('employess_BackendCode.urls')),
     path('admin_url',include('admin_BackendCode.urls')),
 ]
+
+if settings.DEBUG:
+
+    import debug_toolbar
+
+    urlpatterns += path("__debug__", include("debug_toolbar.urls")),
